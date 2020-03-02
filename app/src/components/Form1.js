@@ -94,7 +94,7 @@ function Form(props) {
       item.salary_index = salaryIndex[insertIndex3];
     });
     resultArray.forEach(item => {
-      item.score = (item.hp_index + item.ptal_index+ item.salary_index) / 3;
+      item.score = (item.hp_index + item.ptal_index + item.salary_index) / 3;
     });
 
     console.log(resultArray);

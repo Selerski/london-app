@@ -12,24 +12,25 @@
 }
 .nav-container {
   display: flex;
+  height: 10vh;
   justify-content: space-between;
   margin: 0 10%;
   align-items: center;
 }
-.example-enter {
-  opacity: 0.01;
+
+.menu-container > a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  border: #dcdcdc 1px solid;
+  padding: 15px;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
 }
 
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 2000ms ease-in;
-}
-
-.example-appear {
-  opacity: 0.01;
-}
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity .5s ease-in;
+.menu-container > a:hover {
+  background-color: #e6fc88;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
 }

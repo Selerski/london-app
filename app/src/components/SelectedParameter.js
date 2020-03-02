@@ -1,13 +1,14 @@
 import React from 'react';
 
-function Result(props) {
+
+function SelectedParameter(props) {
   return (
     <div className="list-item">
       <h1>
-        {props.index + 1}. {props.name}
+        YO!!
       </h1>
     </div>
   );
 }
 
-export default Result;
+export default SelectedParameter;

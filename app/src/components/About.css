@@ -1,0 +1,77 @@
+.about-container,
+.jumbotron-container {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.jumbotron-container {
+  padding-top: 0px;
+  flex-direction: row;
+  padding: 50px;
+  width: 80%;
+}
+
+.jumbotron-container > h1 {
+  background-color: white;
+  margin: 0;
+}
+
+.jumbotron-container > p {
+  text-align: center;
+  font-weight: bold;
+}
+
+span {
+  background-color: white;
+  padding: 5px;
+}
+
+.text-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-button > a, .form-button > button {
+  font-weight: bold;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  background-color: #e6fc88;
+  border: #dcdcdc 1px solid;
+  padding: 15px;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+
+.form-button > a:hover, .form-button > button:hover {
+  background-color: white;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+
+.text-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text-right > p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #3a4649;
+  font-size: 1.1em;
+}
+.form-button > a {
+  margin: 0;
+}
+
+.tab-container {
+  display: flex;
+  flex-direction: row;
+}

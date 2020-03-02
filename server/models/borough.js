@@ -14,21 +14,12 @@ const Schema = mongoose.Schema;
 
 const boroughSchema = new Schema({
   site: {
-    type: String,
-  },
-  ratio: {
-    type: String,
-  },
-  salary: {
-    type: String,
+    type: String
   }
 });
 
 const boroughs = mongoose.model('Borough', boroughSchema);
 
 exports.getAllBoroughs = async () => {
-  console.log('hello')
-  const res = await boroughs.find();
-  return res;
+  return await boroughs.find();
 };
-

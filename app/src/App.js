@@ -4,11 +4,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Form from './components/Form';
 import Spinner from 'react-bootstrap/Spinner';
 import LandingPage from './components/LandingPage';
+import About from './components/About';
 import Logo from './logo.png';
 import './App.css';
 
 function App() {
-  const [displayPage, setDisplayPage] = useState(false);
+  const [displayPage, setDisplayPage] = useState(true);
   const [boroughs, setBoroughs] = useState([]);
 
   useEffect(() => {
@@ -16,16 +17,13 @@ function App() {
       method: 'GET'
     })
       .then(response => {
+        console.log(response);
         return response.json();
       })
       .then(jsonData => {
+        console.log(jsonData);
         setBoroughs(jsonData);
       })
-      .then(() =>
-        setTimeout(() => {
-          setDisplayPage(true);
-        }, 500)
-      )
       .catch(err => console.log(err));
   }, []);
 
@@ -50,13 +48,15 @@ function App() {
               </a>
             </div>
             <div className="menu-container">
-              <a href="/">Home</a>
-              <a href="/form">See Magic</a>
+              <a href="/about">About</a>
             </div>
           </div>
           <Switch>
             <Route path="/form">
-              <Form boroughs={boroughs} />
+              <Form boroughs={boroughs} className="form-container" />
+            </Route>
+            <Route path="/about">
+              <About />
             </Route>
             <Route path="/">
               <LandingPage />
