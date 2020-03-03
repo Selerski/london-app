@@ -1,53 +1,18 @@
-// import { Map, GoogleApiWrapper, Marker } from 'google-map-react';
-// import React, { useEffect, useState } from 'react';
-// import './Map.css'
-
-// const mapStyles = {
-//   width: '50%',
-//   height: '50%'
-// };
-
-// function MapContainer(props) {
-//   const [stores, setStores] = useState([]);
-
-//   useEffect(() => {
-//     setStores([{ lat: 51.5074, lng: 0 }]);
-//   }, []);
-
-//   // function displayMarkers() {
-//   //   return stores.map((store, index) => {
-//   //     return (
-//   //       <Marker
-//   //         key={index}
-//   //         id={index}
-//   //         position={{
-//   //           lat: store.lat,
-//   //           lng: store.lng
-//   //         }}
-//   //         onClick={() => console.log('You clicked me!')}
-//   //       />
-//   //     );
-//   //   });
-//   // }
-
 import React, { useState, useEffect } from 'react';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import GoogleMapReact from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-function SimpleMap() {
+function SimpleMap(props) {
+  console.log(props.output)
   const [stores, setStores] = useState([]);
 
   useEffect(() => {
-    setStores([
-      { lat: 51.5074, lng: 0 },
-      { lat: 51.5074, lng: -0.5 }
-    ]);
-  }, []);
+    setStores(props.output);
+    }, []);
 
   function displayMarkers() {
     return stores.map((store, index) => {
+      console.log(store, stores)
       return (
         <FaMapMarkerAlt
           style={{ color: 'red' }}

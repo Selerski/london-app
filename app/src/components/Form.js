@@ -12,8 +12,16 @@ function Form(props) {
     displayResult: false,
     properties: {
       salary: '17',
-      housePrice: '17',
+      rent: '17',
       ptal: '17'
+    },
+    labels: {
+      salary: 'Salary',
+      rent: 'Rent',
+      ptal: 'Public Transportation Accessibility'
+    },
+    currentValue: {
+
     }
   });
 
@@ -40,8 +48,10 @@ function Form(props) {
       return {
         siteId: item.site,
         name: item.name,
-        indices: { salary: 0, housePrice: 0, ptal: 0 },
-        score: 0
+        indices: { salary: 0, rent: 0, ptal: 0 },
+        score: 0,
+        lat: item.lat,
+        lng: item.lng,
       };
     });
 
@@ -75,9 +85,9 @@ function Form(props) {
         ]
       },
       {
-        housePrice: [
+        rent: [
           props.boroughs.slice().sort((a, b) => {
-            return a.housePrice < b.housePrice ? -1 : 0;
+            return a.rent < b.rent ? -1 : 0;
           })
         ]
       },
@@ -146,7 +156,7 @@ function Form(props) {
   function previousButton() {
     let currentStep = result.currentStep;
     // If the current step is not 1, then render the "previous" button
-    if (currentStep !== 1) {
+    if (currentStep < 1 && currentStep < 3) {
       return (
         <button className="btn btn-secondary" type="button" onClick={_prev}>
           Previous
@@ -175,20 +185,17 @@ function Form(props) {
 
   return (
     <div className="container">
-      <ProgressBar style={{ color: '#e6fc88' }} now={result.progressBar * 25} />
-      <form onSubmit={handleSubmit} className="form-container">
+      <ProgressBar style={{ color: '#e6fc88' }} now={result.progressBar * 25} label={`${result.progressBar * 25}%`} />
+      <form onSubmit={handleSubmit} className={result.progressBar === 4 ? 'form-container' : 'form-container active'}>
         <div className="form-group">
           <label
             htmlFor={Object.keys(result.properties)[result.currentStep - 1]}
           >
-            {Object.keys(result.properties)[
-              result.currentStep - 1
-            ][0].toUpperCase() +
-              Object.keys(result.properties)[result.currentStep - 1].slice(
-                1,
-                Object.keys(result.properties)[result.currentStep - 1].length
-              )}
+            {Object.values(result.labels)[result.currentStep-1]}
           </label>
+          <div>
+            v. low
+          </div>
           <input
             className="slider"
             id={Object.keys(result.properties)[result.currentStep - 1]}
@@ -200,15 +207,18 @@ function Form(props) {
             value={Object.values(result.properties)[result.currentStep - 1]}
             onChange={handleChange}
           />
-          {result.currentStep === 3 && (
-            <button className="btn btn-success btn-block" type="submit">
-              SUBMIT
-            </button>
-          )}
+          <div>
+            v. high
+          </div>
         </div>
         <div className="button-container">
           {previousButton()}
           {nextButton()}
+          {result.progressBar === 3 && (
+            <button className="btn btn-success btn-block" type="submit">
+              SUBMIT
+            </button>
+          )}
         </div>
       </form>
       {!!output.length && (
@@ -220,7 +230,7 @@ function Form(props) {
                 return <Result {...borough} key={index + 1} index={index} />;
               })}
             </div>
-            <Map />
+            <Map output={output} />
           </div>
         </>
       )}

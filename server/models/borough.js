@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 mongoose.connect(
-  'mongodb+srv://Selerski:Paparipa123$@cluster0-xrruv.mongodb.net/london-app-api?retryWrites=true&w=majority',
+  `mongodb+srv://${process.env.DB_user}:${process.env.DB_password}@cluster0-xrruv.mongodb.net/london-app-api?retryWrites=true&w=majority`,
   { useNewUrlParser: true }
 );
 
