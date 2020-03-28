@@ -1,0 +1,85 @@
+.landing-container {
+  /* position: absolute;
+    top: 0px;
+    z-index: 100;
+    width: 100%;
+    height: 100vh; */
+  height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.landing-container > h1 {
+  color: black;
+  font-size: 3rem;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a.link {
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: #e6fc88;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: black;
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+}
+
+a.link:hover {
+  background-color: white;
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+}
+
+.city-underline {
+  border-bottom: 0.1em solid #e6fc88;
+  box-shadow: inset 0 -0.4em 0 0 #e6fc88;
+}
+
+.footer-container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.footer-container > a {
+  text-decoration: none;
+  margin: 0;
+  color: black;
+}
+
+.footer-container > .twitter-icon:hover {
+  color: #1da1f2;
+}
+
+.footer-container > .facebook-icon:hover {
+  color: #1778f2;
+}
+.footer-container > .linkedin-icon:hover {
+  color: #006192;
+}

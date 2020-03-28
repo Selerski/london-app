@@ -1,0 +1,76 @@
+.App {
+  height: 100vh;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+img {
+  height: 40px;
+  text-decoration: none;
+}
+
+a > h2 {
+  text-decoration: none;
+  color: black;
+  margin-bottom: 0;
+}
+
+a.logo-container { 
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.spinner-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-container {
+  font-weight: medium;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+div.nav-container {
+  margin: 0 auto;
+  z-index: 1000;
+  position: fixed; 
+  font-weight: bold;
+  top: 0; 
+  width: 100%; 
+  padding: 0 10%;
+  background: white;
+}
+
+.menu-container > a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  border: #dcdcdc 1px solid;
+  padding: 15px;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+
+.menu-container > a:hover {
+  background-color: #e6fc88;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+
+a.is-active {
+  background-color: #e6fc88;
+}
+

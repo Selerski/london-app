@@ -1,0 +1,210 @@
+.about-container,
+.jumbotron-container,
+.algo-jumbotron-container,
+.metric-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.jumbotron-container {
+  height: 100vh;
+  padding-top: 0px;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 80%;
+}
+
+.jumbotron-container > h1 {
+  margin: 0;
+}
+
+div.text-right > p {
+  font-family: 'Fira Sans';
+  font-weight: medium;
+  font-size: 1em;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  background-color: white;
+  padding: 5px;
+}
+
+.metric-container {
+  background-color: #f1f6f4;
+  width: 100%;
+  height: 90vh;
+}
+
+.text-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-button > a {
+  font-weight: bold;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  background-color: #e6fc88;
+  border: #dcdcdc 1px solid;
+  padding: 15px;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+
+.form-button > a:hover,
+.form-button > button:hover {
+  background-color: white;
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+}
+
+.text-right {
+  align-items: center;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-right > p {
+  margin: 0 auto;
+  text-align: center;
+  color: #3a4649;
+  font-size: 1.1em;
+}
+.form-button > a {
+  margin: 0;
+}
+
+.tab-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-button > button {
+  margin: 0 10px;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  border: #dcdcdc 4px solid;
+  padding: 8px 18px;
+  transition: border 1s;
+  -webkit-transition: border 1s;
+}
+.form-button > button.active {
+  border: #e6fc88 4px solid;
+}
+
+.form-button > button:focus {
+  outline: none;
+}
+
+.text-left {
+  flex: 2;
+}
+
+.algo-jumbotron-container {
+  padding: 30px 25% 10px 25%;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.form-button.start-now {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+div.form-button.start-now > a {
+  padding: 10px 35%;
+}
+
+div.param.active {
+  display: none;
+  transition: opacity 1s ease-in;
+  opacity: 0;
+}
+
+div.param {
+  padding: 20px 20px 0 20px;
+  margin-top: 20px;
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: white;
+  width: 80%;
+  transition: opacity 1s ease-out;;
+}
+
+div.param.active > h2 {
+  transition: opacity 1s ease-out;
+  opacity: 0;
+}
+
+div.param > h2 {
+  opacity: 1;
+}
+
+h3.underline {
+  width: 10rem;
+  height: 0.325rem;
+  margin-top: 1rem;
+  background: #e6fc88;
+}
+
+.param > p {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.param > p:first-of-type {
+  font-weight: 500;
+  text-align: center;
+}
+
+.duk-container {
+  padding: 10px;
+  width: 70%;
+  margin: 0 auto;
+  border: #dcdcdc 2px dashed;
+  border-radius: 20px;
+}
+
+.duk-header {
+  margin-left: 10%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.duk-item {
+  margin: 2% 10%;
+  display: flex;
+  flex-direction: row;
+}
+
+div.duk-number {
+  line-height: 1.1;
+  margin-right: 5%;
+  font-size: 3rem;
+  color: #e6fc88;
+  font-weight: bold;
+}
+
+#last {
+  font-size: 2rem;
+}

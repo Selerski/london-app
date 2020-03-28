@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 mongoose.connect(
-  `mongodb+srv://${process.env.DB_user}:${process.env.DB_password}@cluster0-xrruv.mongodb.net/london-app-api?retryWrites=true&w=majority`,
-  { useNewUrlParser: true }
+  `mongodb+srv://${process.env.DB_user}:${process.env.DB_password}@cluster0-xrruv.mongodb.net/london-app-api`,
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 const db = mongoose.connection;
