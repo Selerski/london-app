@@ -26,8 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "webpack --env.GOOGLE_KEY=RrmQGDkVjx9IKqHpCeVv4 --config webpack.config.dev.js",
-    "build": "react-scripts build && webpack --env.GOOGLE_KEY=RrmQGDkVjx9IKqHpCeVv4 --config webpack.config.dev.js",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
