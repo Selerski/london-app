@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000/boroughs'
+const baseUrl = 'https://afternoon-hamlet-45174.herokuapp.com/boroughs'
 
 export async function getAllBoroughs() {
   return await fetch(baseUrl).then(response => {
