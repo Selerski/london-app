@@ -1,4 +1,4 @@
-<b>TownCrunchr</> is a web-based application simplifying house searching for Londoners!
+<b>TownCrunchr<b/> is a web-based application simplifying house searching for Londoners!
 
 Check out a current production version at (https://afternoon-hamlet-45174.herokuapp.com/)
 
